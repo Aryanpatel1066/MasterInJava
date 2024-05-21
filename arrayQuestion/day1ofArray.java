@@ -18,6 +18,15 @@ public class day1ofArray {
 //       System.out.println(avg);
 //
 //    }
+
+    public static  void searchElement(int arr[],int key){
+        for(int i = 0;i<arr.length;i++){
+            if(arr[i] == key){
+                System.out.println("the element "+key+" is present at index no: "+i);
+                break;
+            }
+        }
+    }
    public static void main (String args[]){
        Scanner sc = new Scanner(System.in);
 //       System.out.println("enter the size of array: ");
@@ -58,6 +67,15 @@ public class day1ofArray {
 //       System.out.println(max);
 //
 
-
+//question3) write a program for search element in array
+       int arr[]=new int[5];
+       int key ;
+       System.out.println("enter the array element size is 5 :");
+       for(int i = 0; i<arr.length;i++){
+          arr[i]=sc.nextInt();
+       }
+       System.out.println("enter a key value to find wheather element is present or not: ");
+       key=sc.nextInt();
+       searchElement(arr,key);
     }
 }
