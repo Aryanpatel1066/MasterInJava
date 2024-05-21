@@ -42,22 +42,22 @@ public class day1ofArray {
 
        //queston2) take a array from user input and find maximum element
 
-       System.out.println("enter the size of array");
-       int size = sc.nextInt();
-       int arr[] = new int[size];
-       int maximum = arr[0];
-       System.out.println("enter "+size+"element");
-       for(int i =0;i<size;i++){
-           arr[i]=sc.nextInt();
-       }
-       for(int i=0;i<size;i++){
-           if(arr[i]>arr[i++]){
-               System.out.println(arr[i]);
-           }
-        else{
+//       System.out.println("enter the size of array");
+//       int size = sc.nextInt();
+//       int arr[] = new int[size];
+//       int max = arr[0];
+//        System.out.println("enter "+size+"element");
+//       for(int i =0;i<size;i++){
+//           arr[i]=sc.nextInt();
+//       }
+//       for(int i=0;i<size;i++) {
+//           if(arr[i]>max){
+//               max=arr[i];
+//           }
+//        }
+//       System.out.println(max);
+//
 
-           }
-       }
-       System.out.println(maximum);
-   }
+
+    }
 }
