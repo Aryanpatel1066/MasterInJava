@@ -35,6 +35,17 @@ public class day2ofArray {
 //            }
 //        }
 //    }
+
+    public static boolean twiceElement(int arr[]){
+        for(int i =0;i<arr.length-1;i++){
+            for(int j = i+1;j<arr.length;j++){
+                if(arr[i]==arr[j]){
+                    return true;
+                }
+            }
+        }
+        return  false;
+     }
     public static void main(String[] args) {
 //        Scanner sc = new Scanner(System.in);
 
@@ -53,5 +64,11 @@ public class day2ofArray {
         //question4) pick element and its bigger then left and right side
 //        int arr[]={1,1,3,4,2,3,5,7,0};
 //        leftAndRightBigger(arr);
+
+        //question4) the element any one can twice then return true;
+
+        int arr[]={1,2,3,};
+        boolean ans = twiceElement(arr);
+        System.out.println(ans);
      }
 }
