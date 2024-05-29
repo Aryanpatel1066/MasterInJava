@@ -38,6 +38,21 @@ public class day3ofArray {
         }
         return sorted;
     }
+
+    public static void sortedArray(int arr[]){
+        for(int i=0;i<arr.length;i++){
+            for(int j=i+1;j<arr.length;j++){
+                if(arr[i]>arr[j]){
+                    int swap = arr[i];
+                    arr[i]=arr[j];
+                    arr[j]=swap;
+                }
+             }
+            System.out.println(arr[i]);
+        }
+
+    }
+
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
         //taking size of array from user
@@ -50,8 +65,8 @@ public class day3ofArray {
             arr[i]=sc.nextInt();
         }
         //taking keyValue for search in array
-        System.out.println("enter key value ");
-        int key = sc.nextInt();
+//        System.out.println("enter key value ");
+//        int key = sc.nextInt();
 
         //question1 : find the given element how many time present in array
 //           int ans = counterElement(arr,key);
@@ -62,7 +77,10 @@ public class day3ofArray {
 //        System.out.println(key +" is lastoccurrence is "+ans);
 
         //question3: weather an array is sorted or not(ascending or descending anything )
-        boolean ans = isSorted(arr);
-        System.out.println(ans + "is sorted");
-    }
+//        boolean ans = isSorted(arr);
+//        System.out.println(ans + "is sorted");
+
+        //question4: sort the array
+        sortedArray(arr);
+     }
 }
