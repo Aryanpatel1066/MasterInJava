@@ -21,12 +21,29 @@ public class day5ofArray {
                 for(int k=j+1;k<arr.length;k++){
                     if(arr[i] + arr[j]+arr[k]==target){
                         counter ++;
-
                     }
                 }
             }
         }
         return counter;
+    }
+
+    static int uniqueElements(int arr[]){
+        for(int i = 0;i<arr.length;i++){
+            for(int j = i+1;j<arr.length;j++){
+                if(arr[i] == arr[j]){
+                    arr[i] = -2;
+                    arr[j] = -2;
+                }
+            }
+        }
+        int ans = -2;
+        for(int i= 0;i<arr.length;i++){
+            if(arr[i]!=-2){
+                ans = arr[i];
+            }
+        }
+        return ans;
     }
     public static void main (String args[]){
         Scanner sc = new Scanner(System.in);
@@ -35,18 +52,22 @@ public class day5ofArray {
         System.out.println("enter array element");
         int arr[]= new int[size];
         for(int i=0;i<size;i++){
-            arr[i]=sc.nextInt();
+
+             arr[i]=sc.nextInt();
         }
-        System.out.println("enter the target");
-        int target = sc.nextInt();
+//        System.out.println("enter the target");
+//        int target = sc.nextInt();
 
         //question1) the sum of target of two pair
 //        int ans = targetOfSum7(arr,target);
 //        System.out.println("total sum is 7 pir : "+ans);
 
         //question2) the sum of triplet of three pair
-        int ans2 = triplateOfSum(arr,target);
-        System.out.println("total sum of three pair is "+ans2);
+//        int ans2 = triplateOfSum(arr,target);
+//        System.out.println("total sum of three pair is "+ans2);
 
+        //question3) find unique element in array
+       int ans3 =  uniqueElements(arr);
+        System.out.println(ans3);
     }
 }
