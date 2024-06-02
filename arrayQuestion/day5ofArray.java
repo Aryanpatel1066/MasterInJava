@@ -45,6 +45,32 @@ public class day5ofArray {
         }
         return ans;
     }
+    static int firstRepeated(int arr[]){
+        for(int i =0;i<arr.length;i++){
+            for(int j = i+1;j<arr.length;j++){
+                if(arr[i]==arr[j]){
+                    return arr[i];
+                }
+            }
+        }
+        return -1;
+    }
+    static int secondLargestNum(int arr[]){
+        int max = arr[0];
+        int secondMax =Integer.MIN_VALUE;
+        for(int i = 0;i<arr.length;i++){
+            if(arr[i]>max){
+                max = arr[i];
+             }
+        }
+
+        for(int i =0;i<arr.length;i++){
+            if(arr[i]>secondMax && arr[i]<max){
+                secondMax= arr[i];
+            }
+        }
+        return secondMax;
+    }
     public static void main (String args[]){
         Scanner sc = new Scanner(System.in);
         System.out.println("enter the size of array");
@@ -67,7 +93,14 @@ public class day5ofArray {
 //        System.out.println("total sum of three pair is "+ans2);
 
         //question3) find unique element in array
-       int ans3 =  uniqueElements(arr);
-        System.out.println(ans3);
+//       int ans3 =  uniqueElements(arr);
+//        System.out.println(ans3);
+
+        //question4) find the second largest element from arrar
+         int ans = secondLargestNum(arr);
+        System.out.println(ans);
+        //quesion5) find the first repeated value
+//        int ans = firstRepeated(arr);
+//        System.out.println(ans);
     }
 }
