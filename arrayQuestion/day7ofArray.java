@@ -12,6 +12,21 @@ public class day7ofArray {
         }
         return arr1;
     }
+    static void reverseInPlaceArr(int arr[]){
+        int n = arr.length;
+        int i =0,j= arr.length-1;
+        int temp;
+        for(int k = 0;k<arr.length;k++){
+            if(i<j){
+                temp = arr[i];
+                arr[i]=arr[j];
+                arr[j]=temp;
+                i++;
+                j--;
+              }
+        }
+
+           }
     public static void main (String args[]){
         // swap the value without temp
 //        int a = 2;
@@ -30,9 +45,14 @@ public class day7ofArray {
             arr[i]=sc.nextInt();
         }
         //question1) reverse the array
-        int ans[]= reverseAnArray(arr);
-        for(int i =0;i<ans.length;i++){
-            System.out.println(ans[i]);
+//        int ans[]= reverseAnArray(arr);
+//        for(int i =0;i<ans.length;i++){
+//            System.out.println(ans[i]);
+//        }
+        //quesion2) reverse array in same
+        reverseInPlaceArr(arr);
+        for(int i =0;i<arr.length;i++){
+            System.out.println(arr[i]);
         }
      }
 }
